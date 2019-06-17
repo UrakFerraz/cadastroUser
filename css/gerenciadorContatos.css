@@ -1,0 +1,611 @@
+:root {
+  --color-primary: #005AF0;
+  --space-1: .5rem;  /* 8px */
+  --space-4: 2rem;   /* 32px */
+}
+
+/* Styles for the flex layout based tabs */
+amp-selector[role=tablist].tabs-with-flex {
+    display: flex;
+    flex-wrap: wrap;
+    outline: none;
+}
+
+amp-selector[role=tablist].tabs-with-flex [role=tab] {
+    flex-grow: 1;
+    /* custom styling, feel free to change */
+    text-align: center;
+    padding: 9px 5px;
+}
+
+amp-selector[role=tablist].tabs-with-flex [role=tab][selected] {
+    outline: none;
+    /* custom styling, feel free to change */
+    border-bottom: 2px solid #8E9AAF;
+}
+
+amp-selector[role=tablist].tabs-with-flex [role=tabpanel] {
+    display: none;
+    width: 100%;
+    order: 1; /* must be greater than the order of the tab buttons to flex to the next line */
+    /* custom styling, feel free to change */
+    padding: 31px 0 0 0;
+}
+
+amp-selector[role=tablist].tabs-with-flex [role=tab][selected] + [role=tabpanel] {
+    display: block;
+    outline: none;
+}
+
+/* Styles for the selector based tabs */
+amp-selector[role=tablist].tabs-with-selector {
+    display: flex;
+}
+
+amp-selector[role=tablist].tabs-with-selector [role=tab][selected] {
+    outline: none;
+    /* custom styling, feel free to change */
+    border-bottom: 2px solid #8E9AAF;
+}
+
+amp-selector[role=tablist].tabs-with-selector {
+    display: flex;
+}
+
+amp-selector[role=tablist].tabs-with-selector [role=tab] {
+  /* custom styling, feel free to change */
+  width: 100%;
+  text-align: center;
+  padding: 9px 5px;
+}
+
+amp-selector.tabpanels [role=tabpanel] {
+  display: none;
+  /* custom styling, feel free to change */
+  padding: 9px 5px;
+  outline: none;
+}
+
+amp-selector.tabpanels [role=tabpanel][selected] {
+  outline: none;
+  display: block;
+  outline: none;
+}
+
+
+/*scrollbars################################*/
+
+/*scrollbar logs custom*/
+.scrollbar {
+  margin-left: 10px;
+  float: left;
+  height: 480px;
+  width: 99%;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  margin: 10px 0 0 0;
+}
+
+.force-overflow {
+  min-height: 100px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+#style-3-scrollbar::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.15);
+  background-color: #fff;
+}
+
+#style-3-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  background-color: #fff;
+}
+
+#style-3-scrollbar::-webkit-scrollbar-thumb {
+  background-color: silver;
+}
+/*scrollbar logs custom*/
+
+
+/*scrollbar aba content custom*/
+.scrollbarContent {
+  margin-left: 10px;
+  float: left;
+  height: 339px;
+  width: 99%;
+  background: #fff;
+  overflow-y: scroll;
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+  margin: 10px 0 0 0;
+}
+
+.force-overflowContent {
+  min-height: 100px;
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+#style-3-scrollbarContent::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.15);
+  background-color: #fff;
+}
+
+#style-3-scrollbarContent::-webkit-scrollbar {
+  width: 6px;
+  background-color: #fff;
+}
+
+#style-3-scrollbarContent::-webkit-scrollbar-thumb {
+  background-color: silver;
+}
+/*scrollbar aba content custom*/
+
+header {
+  height: 120px;
+  width: 100%;
+  background-color: lightgray;
+}
+
+.gerenciadorContatosWrapper {
+  max-width: 1024px;
+  position: relative;
+  display: block;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/*flex*/
+.flexColumn {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.flexRow {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/*contatos container*/
+.gerenciadorContatosWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  grid-template-rows: 80px auto;
+  grid-column-gap: 20px;
+  box-sizing: border-box;
+  font-family: "Roboto Condensed", sans-serif;
+  margin: 20px;
+}
+
+/*novo contato btn*/
+.novoContatoBtn {
+  width: 155px;
+  height: 40px;
+  background-color: #26547C;
+  border-radius: 7px;
+  border: none;
+  color: #eee2df;
+  transition: 0.3s ease all;
+  justify-self: flex-end;
+  cursor: pointer;
+}
+
+.novoContatoBtn:hover {
+  background-color: #1f8a70;
+  transform: translate(0,-3px);
+  box-shadow: 0 3px 20px 0px rgba(0,0,0, 0.2);
+}
+
+.novoContatoBtnSvg {
+  height: 25px;
+  margin-right: 8px;
+}
+
+/*contato aba título*/
+.contatoAbaTitleWrapper {
+  color: #26547C;
+  font-weight: 600;
+}
+
+.contatoAbaSvg {
+  height: 30px;
+  position: relative;
+  margin-right: 10px;
+}
+
+
+
+/*logs container*/
+.logsContatosWrapper {
+  position: relative;
+  border: 1.5px solid #eee2df;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  /*box-shadow: 0px 20px 50px 0px rgba(0,0,0,0.2);*/
+  border-radius: 10px;
+  padding: 10px 5px 10px 10px;
+}
+
+.logsContatosTitleWrapper {
+  position: absolute;
+  justify-content: flex-start;
+  z-index: 100;
+  left: 20px;
+  top: -15px;
+}
+
+.logsContatosTitle {
+  position: relative;
+  margin-left: 6px;
+  color: #8e9aaf;
+  text-transform: uppercase;
+}
+
+.logsContatosTitleBg {
+  background-color: #fff;
+  width: 140px;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  left: -6px;
+}
+
+.logsContatosTitleBg1 {
+  background-color: #fff;
+  width: 125px;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  left: -6px;
+}
+
+.logsContatosTitleBg3 {
+  background-color: #fff;
+  width: 186px;
+  height: 20px;
+  position: absolute;
+  z-index: -1;
+  left: -6px;
+}
+
+.logsSvg {
+  height: 30px ;
+}
+
+/*novo contato btn*/
+.novoContatoBtn {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+/*log line*/
+.logLineWrapper {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  text-align: justify;
+  width: 97%;
+  border: 1px solid #eee2df;
+  padding: 10px;
+  border-radius: 5px;
+  color: #26547C;
+  margin-bottom: 10px;
+}
+
+#dotCircleSymbol {
+  color: #eee2df;
+  margin: 0 6px;
+}
+
+.logLineCleanText {
+  color: #8e9aaf;
+}
+
+/*aba content*/
+.contatoAbaContentWrapper {
+  border: 1.5px solid #eee2df;
+  border-radius: 10px;
+  padding: 10px 5px 10px 10px;
+}
+
+/*fav section*/
+amp-carousel {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  color: #233656;
+}
+
+.favSlidesWrapper {
+  /*background-color: gray;*/
+  /*border: 1px solid gray;*/
+  width: 85%;
+  height: 190px;
+}
+
+/* final fav section*/
+
+/*contato bloco fav*/
+.contatoBlockWrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-template-rows: auto  auto;
+  border: 1px solid #eee2df;
+  box-sizing: border-box;
+  border-radius: 5px;
+  padding: 5px 5px 0 4px;
+  width: 170px;
+  top: 8px;
+  margin-right: 20px;
+  left: 10px;
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.contatoBlockWrapper:hover {
+  background-color: #8e9aaf;
+  color: #eee2df;
+}
+
+.contatoBlockWrapper amp-img {
+  position: relative;
+  display: flex;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  border-radius: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.contatoBlockTitle {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  font-size: 14px;
+  line-height: 1.3;
+  color: #233656;
+  font-weight: 600;
+}
+
+.contatoBlockTexts {
+  position: relative;
+  display: block;
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+  font-size: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #233656;
+  line-height: 1.5;
+  width: 95px;
+}
+
+.contatoBlockTexts li {
+  position: relative;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contatoBlockBtnsWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  width: 100%;
+}
+
+.contatoBlockBtns {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.contatoBlockBtnsSvg {
+  width: 15px;
+  transition: 0.3s ease all;
+  outline: none;
+}
+
+.contatoBlockBtnsSvg:hover {
+  fill: #8e9aaf;
+}
+
+/*últimos buscados*/
+.marginTopBlock {
+  margin-top: 30px;
+}
+
+.ultimosBuscadosBlock {
+  margin: 20px 20px 6px 0;
+  width: 145px;
+  margin-right: 20px;
+  left: 10px;
+  top: -5px;
+  width: 150px;
+}
+
+.ultimosBuscadosBlockTitle {
+  width: 100px;
+}
+/*final últimso buscados*/
+
+
+/*modal selecione o tipo de contato*/
+/*hover effect*/
+.hvr-grow {
+    display:grid;
+    vertical-align:middle;
+    -webkit-transform:perspective(1px) translateZ(0);
+    transform:perspective(1px) translateZ(0);
+    box-shadow:0 0 1px rgba(0,0,0,0);
+    -webkit-transition-duration:.3s;
+    transition-duration:.3s;
+    -webkit-transition-property:transform;
+    transition-property:transform
+}
+
+.hvr-grow:hover {
+    -webkit-transform:scale(1.1);
+    transform:scale(1.1);
+    box-shadow:0 0 27px 0 rgba(0,0,0,0.15);
+    background:#80a4be
+}
+
+.modalTipoContatoWrapper {
+  position: absolute;
+  display: none;
+  z-index: 200;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0px 150px 0 rgba(0,0,0,0.4);
+  font-family: "Roboto Condensed", sans-serif;
+
+}
+
+.contatosTemplatesTitle {
+    text-align: center;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    margin: 40px 0 0 0;
+    font-size: 35px;
+    font-weight: 100;
+    color: #26547c;
+}
+
+.contatosTemplatesWrapper {
+    text-align: center;
+    color: #26547c;
+    font-weight: 500;
+    font-size: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 0 30px;
+    padding: 0;
+    height: 40vh;
+}
+
+.contatoTemplateBlock {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 60px 30px auto;
+    background-color: #fff;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 50px 0 rgba(0,0,0,0.10);
+    height: 220px;
+    width: 16vw;
+    border-radius: 10px;
+    flex-grow: 1;
+    margin: 10px;
+    box-sizing: border-box;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.arrowText {
+    position: absolute;
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    justify-self: center;
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: space-around;
+    height: 90px;
+}
+
+.contatoTemplateBlock span {
+    position: relative;
+}
+
+.contatoTemplateBlockSvg {
+    height: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+    justify-self: center;
+}
+
+#contatoTemplateBlockSvgArrow {
+    height: 12px;
+    position: relative;
+}
+
+.coIcon {
+    position: relative;
+    height: 70px;
+    left: 5px;
+}
+
+.latam, .coInt {
+    position: relative;
+    grid-template-rows: 80px 10px auto;
+}
+
+.Influencer {
+    position: relative;
+    grid-template-rows: 70px 20px auto;
+}
+
+.targetSvg {
+    position: relative;
+    left: 10px;
+}
+
+.selecionarContatoModalCloseBtn {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 20;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.selecionarContatoModalCloseBtn svg {
+  height: 20px;
+}
+/*final modal selecione o tipo de contato*/
